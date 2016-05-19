@@ -20,7 +20,7 @@ function registerWebComponent(name, appInstance) {
   EmberComponentWrapper.prototype.appInstance = appInstance;
   let customElementTest = document.createElement(name.replace(/\//g, '-'));
   if (!customElementTest.constructor.isEmberComponentWrapper) {
-    document.registerElement(name.replace(/\//g, '-'), EmberComponentWrapper);
+    document.registerElement(name.replace(/\//g, '-'));
   }
 }
 
